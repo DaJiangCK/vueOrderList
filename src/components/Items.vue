@@ -1,5 +1,5 @@
 <template>
-  <div class='hello'>
+  <div class='items'>
     <p class='date'>Order Date: {{ orderDate }}</p>
     <input
       v-model='newItem.name'
@@ -64,7 +64,7 @@ var orderMonth = new Date().getMonth() + 1
 var orderDay = new Date().getDate()
 var itemsRef = db.ref('items/' + orderYear + orderMonth + orderDay)
 export default {
-  name: 'hello',
+  name: 'items',
   data () {
     return {
       orderDate: new Date().toLocaleDateString(),
